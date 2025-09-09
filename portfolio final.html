@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janani A | MLOps Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Janani A, an Electronics and Communication Engineering student specializing in MLOps, AI, and web development.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom Configuration for Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Source Sans 3', 'sans-serif'],
+                    },
+                    colors: {
+                        'beige': '#F5F5DC',
+                        'dark-brown': '#3E2723',
+                        'burgundy': '#800020',
+                        'light-brown': '#A1887F',
+                        'off-white': '#FAF9F6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Style for page transition */
+        .page-section {
+            display: none;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        .page-section.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-link.active {
+            color: #800020;
+            font-weight: 600;
+            position: relative;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #800020;
+        }
+    </style>
+</head>
+
+<body class="bg-off-white font-sans text-dark-brown">
+
+    <!-- Header -->
+    <header class="bg-off-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-beige">
+        <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-serif text-burgundy nav-link-header">Janani A</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-burgundy transition-colors duration-300">Home</a>
+                <a href="#about" class="nav-link hover:text-burgundy transition-colors duration-300">About</a>
+                <a href="#projects" class="nav-link hover:text-burgundy transition-colors duration-300">Projects</a>
+                <a href="#skills" class="nav-link hover:text-burgundy transition-colors duration-300">Skills</a>
+                <a href="#certifications" class="nav-link hover:text-burgundy transition-colors duration-300">Certifications</a>
+                <a href="#contact" class="nav-link hover:text-burgundy transition-colors duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu can be added here -->
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- Home Section -->
+        <section id="home" class="page-section active">
+            <div class="text-center py-10 md:py-20">
+                <h1 class="font-serif text-5xl md:text-7xl font-bold text-dark-brown">Aspiring MLOps Engineer</h1>
+                <p class="mt-4 text-lg md:text-xl text-light-brown">Bridging the gap between machine learning models and production.</p>
+                <p class="mt-6 max-w-2xl mx-auto">I'm an Electronics and Communication Engineering student passionate about deploying scalable, real-world AI solutions. This is my corner of the internet to showcase my work.</p>
+                <div class="mt-10">
+                    <a href="#projects" class="nav-link-button bg-burgundy text-white px-8 py-3 rounded-md font-semibold hover:bg-opacity-90 transition-all duration-300">Explore My Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="page-section">
+             <div class="grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-3">
+                    <h2 class="font-serif text-4xl font-bold text-dark-brown">About Me</h2>
+                    <p class="mt-4 text-lg text-light-brown">I am a resourceful and adaptable third-year ECE student at KPR Institute of Engineering and Technology.</p>
+                    <p class="mt-4">My focus lies at the intersection of AI and software engineering, specializing in MLOps, automation, and full-stack web development. I have hands-on expertise in deploying machine learning models, automating workflows, and building scalable applications from concept to cloud. I am passionate about integrating modern software practices with data-driven technologies to solve complex problems and deliver measurable impact.</p>
+                </div>
+                <div class="md:col-span-2 bg-beige p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-serif text-2xl text-dark-brown font-bold mb-4">Education</h3>
+                    <p class="font-semibold text-burgundy">B.E, Electronics & Communication</p>
+                    <p class="text-light-brown">KPR Institute of Engineering and Technology</p>
+                    <p class="text-sm mt-1">2023 - 2027</p>
+                    <p class="text-sm mt-1">CGPA: 8.38</p>
+                    
+                    <h3 class="font-serif text-2xl text-dark-brown font-bold mt-6 mb-4">Currently Learning</h3>
+                    <ul class="space-y-2 text-dark-brown list-disc list-inside">
+                        <li>Advanced MLOps Workflows</li>
+                        <li>AWS Cloud Fundamentals</li>
+                        <li>Real-time Data Visualization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="page-section">
+            <h2 class="font-serif text-4xl font-bold text-dark-brown text-center">Featured Projects</h2>
+            <p class="mt-4 text-center max-w-2xl mx-auto text-light-brown">A selection of projects where I've applied my skills in AI, web development, and MLOps principles.</p>
+            <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1: MindMate -->
+                <div class="bg-white border border-beige rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <img src="https://placehold.co/600x400/800020/FAF9F6?text=MindMate" alt="MindMate Project" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-serif text-2xl font-bold">MindMate</h3>
+                        <p class="mt-2 text-light-brown flex-grow">AI-powered full-stack platform for emotional wellness with multilingual support and voice interaction.</p>
+                        <div class="mt-6 flex space-x-4">
+                            <a href="https://mindmate-emo.netlify.app" target="_blank" class="text-burgundy font-semibold hover:underline">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2: SkillForge -->
+                <div class="bg-white border border-beige rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <img src="https://placehold.co/600x400/3E2723/FAF9F6?text=SkillForge" alt="SkillForge Project" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-serif text-2xl font-bold">SkillForge</h3>
+                        <p class="mt-2 text-light-brown flex-grow">An AI-Powered Roadmap Generator for personalized skill growth and learning path automation.</p>
+                        <div class="mt-6 flex space-x-4">
+                             <a href="#" class="text-light-brown font-semibold cursor-not-allowed">Source (Private)</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3: Face Recognition -->
+                <div class="bg-white border border-beige rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                     <img src="https://placehold.co/600x400/A1887F/FAF9F6?text=AI+Attendance" alt="Face Recognition Attendance Project" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-serif text-2xl font-bold">Real-Time Face Recognition</h3>
+                        <p class="mt-2 text-light-brown flex-grow">Automated AI attendance system with 80%+ accuracy using OpenCV and ML techniques.</p>
+                         <div class="mt-6 flex space-x-4">
+                             <a href="#" class="text-light-brown font-semibold cursor-not-allowed">Source (Private)</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 4: FlicksNow -->
+                <div class="bg-white border border-beige rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                     <img src="https://placehold.co/600x400/800020/FAF9F6?text=FlicksNow" alt="FlicksNow Project" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-serif text-2xl font-bold">FlicksNow</h3>
+                        <p class="mt-2 text-light-brown flex-grow">A dynamic and responsive movie database web application for film discovery and information.</p>
+                         <div class="mt-6 flex space-x-4">
+                             <a href="https://github.com/Janani2436/flicksnow" target="_blank" class="text-burgundy font-semibold hover:underline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project Card 5: EcoFinds -->
+                <div class="bg-white border border-beige rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                     <img src="https://placehold.co/600x400/3E2723/FAF9F6?text=EcoFinds" alt="EcoFinds Project" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-serif text-2xl font-bold">EcoFinds</h3>
+                        <p class="mt-2 text-light-brown flex-grow">An e-commerce website that empowers sustainable consumption through a second-hand marketplace.</p>
+                         <div class="mt-6 flex space-x-4">
+                             <a href="https://github.com/Janani2436/EcoFinds" target="_blank" class="text-burgundy font-semibold hover:underline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="page-section">
+            <h2 class="font-serif text-4xl font-bold text-dark-brown text-center">Technical Proficiencies</h2>
+            <p class="mt-4 max-w-3xl mx-auto text-light-brown text-center">The technologies, languages, and tools I use to build, deploy, and manage applications.</p>
+            <div class="mt-12 grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg border border-beige shadow-sm">
+                    <h3 class="font-serif text-2xl font-bold text-burgundy mb-4">AI & ML</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">scikit-learn</span>
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">OpenCV</span>
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">Model Deployment</span>
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">Data Pipelines</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-beige shadow-sm">
+                    <h3 class="font-serif text-2xl font-bold text-burgundy mb-4">DevOps & MLOps</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">Docker</span>
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">CI/CD</span>
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">GitHub Actions</span>
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">Jenkins</span>
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">Git</span>
+                    </div>
+                </div>
+                 <div class="bg-white p-6 rounded-lg border border-beige shadow-sm">
+                    <h3 class="font-serif text-2xl font-bold text-burgundy mb-4">Web Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">React.js</span>
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">Node.js</span>
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">Tailwind CSS</span>
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">REST APIs</span>
+                        <span class="bg-beige text-dark-brown font-semibold px-3 py-1 rounded-full">JWT Auth</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Certifications Section -->
+        <section id="certifications" class="page-section">
+            <h2 class="font-serif text-4xl font-bold text-dark-brown text-center">Certifications</h2>
+             <p class="mt-4 max-w-3xl mx-auto text-light-brown text-center">A collection of my professional certifications and ongoing learning achievements.</p>
+            <div class="mt-12 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-white p-5 rounded-lg border border-beige shadow-sm text-center">
+                    <p class="font-semibold text-dark-brown">Introduction to MLOps</p>
+                    <p class="text-sm text-light-brown">Microsoft Learn</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-beige shadow-sm text-center">
+                    <p class="font-semibold text-dark-brown">C Programming for Beginners</p>
+                    <p class="text-sm text-light-brown">Udemy</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-beige shadow-sm text-center">
+                    <p class="font-semibold text-dark-brown">Python (Basic)</p>
+                    <p class="text-sm text-light-brown">Hackerrank</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-beige shadow-sm text-center">
+                    <p class="font-semibold text-dark-brown">Python for Data Science</p>
+                    <p class="text-sm text-light-brown">NPTEL</p>
+                </div>
+                 <div class="bg-white p-5 rounded-lg border border-beige shadow-sm text-center sm:col-span-2">
+                    <p class="font-semibold text-dark-brown">Intro to Industry 4.0 & IIoT</p>
+                    <p class="text-sm text-light-brown">NPTEL</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="page-section">
+            <div class="text-center py-10">
+                <h2 class="font-serif text-4xl font-bold text-dark-brown">Let's Connect</h2>
+                <p class="mt-4 max-w-xl mx-auto text-light-brown">I am actively seeking internship opportunities and am open to collaborations. Feel free to reach out!</p>
+                <div class="mt-10">
+                    <a href="mailto:janania2436@gmail.com" class="bg-burgundy text-white text-lg px-10 py-4 rounded-md font-semibold hover:bg-opacity-90 transition-all duration-300 inline-block">Say Hello</a>
+                </div>
+                <div class="mt-12 flex justify-center space-x-6">
+                    <a href="https://github.com/Janani2436" target="_blank" class="text-light-brown hover:text-burgundy transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12.014c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.014C22 6.477 17.523 2 12 2z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="http://www.linkedin.com/in/janani2006" target="_blank" class="text-light-brown hover:text-burgundy transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-beige border-t border-gray-200 mt-12">
+        <div class="container mx-auto px-6 py-6 text-center text-light-brown">
+            <p>&copy; 2025 Janani A. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link, .nav-link-header, .nav-link-button');
+            const sections = document.querySelectorAll('.page-section');
+
+            function showPage(pageId) {
+                sections.forEach(section => {
+                    if (section.id === pageId) {
+                        section.classList.add('active');
+                    } else {
+                        section.classList.remove('active');
+                    }
+                });
+                
+                // Update active state for navigation links
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    if (link.hash === '#' + pageId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+                window.scrollTo(0, 0);
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.hash.substring(1);
+                    showPage(targetId);
+                });
+            });
+
+            // Set initial active link
+            showPage('home');
+        });
+    </script>
+
+</body>
+</html>
+
