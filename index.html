@@ -7,15 +7,14 @@
 
     <meta name="description" content="Portfolio of Janani A, an Electronics and Communication Engineering student focused on cybersecurity, network security, and secure systems.">
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -37,11 +36,11 @@
     </script>
 
     <style>
-        .page-section { display: none; animation: fadeIn 0.6s ease-in-out; }
+        .page-section { display: none; animation: fadeIn 0.5s ease-in-out; }
         .page-section.active { display: block; }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(8px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
@@ -70,12 +69,12 @@
     <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
         <a href="#home" class="text-2xl font-serif text-burgundy nav-link-header">Janani A</a>
         <div class="hidden md:flex space-x-8">
-            <a href="#home" class="nav-link hover:text-burgundy">Home</a>
-            <a href="#about" class="nav-link hover:text-burgundy">About</a>
-            <a href="#projects" class="nav-link hover:text-burgundy">Projects</a>
-            <a href="#skills" class="nav-link hover:text-burgundy">Skills</a>
-            <a href="#certifications" class="nav-link hover:text-burgundy">Certifications</a>
-            <a href="#contact" class="nav-link hover:text-burgundy">Contact</a>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
     </nav>
 </header>
@@ -93,13 +92,13 @@
         </p>
         <p class="mt-6 max-w-2xl mx-auto">
             I’m a third-year Electronics and Communication Engineering student with a growing focus on
-            cybersecurity, network protection, and secure system design. I enjoy understanding how
-            systems work, how they fail, and how to defend them.
+            cybersecurity, network protection, and secure system design.
         </p>
         <div class="mt-10">
-            <a href="#projects" class="bg-burgundy text-white px-8 py-3 rounded-md font-semibold hover:bg-opacity-90">
+            <button onclick="showPage('projects')"
+                class="bg-burgundy text-white px-8 py-3 rounded-md font-semibold hover:bg-opacity-90 transition">
                 View My Work
-            </a>
+            </button>
         </div>
     </div>
 </section>
@@ -113,10 +112,8 @@
                 Third-year Electronics and Communication Engineering student at KPR Institute of Engineering and Technology.
             </p>
             <p class="mt-4">
-                My primary interest lies in cybersecurity and network protection. I am building a strong
-                foundation in networking, operating systems, Linux, and security concepts. I enjoy
-                analyzing network traffic, understanding vulnerabilities, and learning how secure systems
-                are designed and maintained.
+                My interest lies in cybersecurity and network protection. I am building a strong
+                foundation in networking, Linux, operating systems, and core security concepts.
             </p>
         </div>
 
@@ -140,117 +137,59 @@
 <!-- Projects -->
 <section id="projects" class="page-section">
     <h2 class="font-serif text-4xl font-bold text-center">Projects</h2>
-    <p class="mt-4 text-center max-w-2xl mx-auto text-light-brown">
-        Projects that reflect my interest in cybersecurity, system analysis, and secure application development.
-    </p>
 
     <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- DevOps Pilot (Cyber reframed) -->
         <div class="bg-white border rounded-lg shadow-md p-6">
             <h3 class="font-serif text-2xl font-bold">DevOps Pilot</h3>
             <p class="mt-2 text-light-brown">
-                An AI-powered system that analyzes CI/CD build logs to detect failures, misconfigurations,
-                and potential security-related issues, helping improve system reliability and awareness.
+                System that analyzes CI/CD build logs to detect failures,
+                misconfigurations, and potential security issues.
             </p>
         </div>
 
-        <!-- MindMate -->
         <div class="bg-white border rounded-lg shadow-md p-6">
             <h3 class="font-serif text-2xl font-bold">MindMate</h3>
             <p class="mt-2 text-light-brown">
-                AI-powered full-stack platform where I contributed to backend development and UI design,
-                with a focus on data security, privacy, and safe handling of user information.
+                Full-stack platform with focus on backend security, privacy,
+                and safe handling of user data.
             </p>
         </div>
 
-        <!-- Face Recognition -->
         <div class="bg-white border rounded-lg shadow-md p-6">
             <h3 class="font-serif text-2xl font-bold">Computer Vision Attendance System</h3>
             <p class="mt-2 text-light-brown">
-                Real-time attendance system using computer vision techniques, designed with controlled
-                access and responsible use of biometric data.
+                Attendance system using computer vision with controlled access
+                and responsible biometric usage.
             </p>
         </div>
 
-        <!-- FlicksNow -->
-        <div class="bg-white border rounded-lg shadow-md p-6">
-            <h3 class="font-serif text-2xl font-bold">FlicksNow</h3>
-            <p class="mt-2 text-light-brown">
-                Movie database web application demonstrating full-stack development and secure API usage.
-            </p>
-        </div>
-
-        <!-- EcoFinds -->
-        <div class="bg-white border rounded-lg shadow-md p-6">
-            <h3 class="font-serif text-2xl font-bold">EcoFinds</h3>
-            <p class="mt-2 text-light-brown">
-                E-commerce platform for second-hand products, built with attention to authentication
-                and basic security practices.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<!-- Skills -->
-<section id="skills" class="page-section">
-    <h2 class="font-serif text-4xl font-bold text-center">Skills</h2>
-
-    <div class="mt-12 grid md:grid-cols-3 gap-8">
-
-        <div class="bg-white p-6 rounded-lg border">
-            <h3 class="font-serif text-2xl font-bold text-burgundy mb-4">Cybersecurity</h3>
-            <p>Network Security Basics, Ethical Hacking (Beginner), Security Concepts</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-lg border">
-            <h3 class="font-serif text-2xl font-bold text-burgundy mb-4">Networking & OS</h3>
-            <p>TCP/IP, DNS, Firewalls, Linux Fundamentals, Command Line</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-lg border">
-            <h3 class="font-serif text-2xl font-bold text-burgundy mb-4">Tools & Programming</h3>
-            <p>Python, Git, Wireshark, CI/CD Basics, Docker (Basic)</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- Certifications -->
-<section id="certifications" class="page-section">
-    <h2 class="font-serif text-4xl font-bold text-center">Certifications</h2>
-
-    <div class="mt-12 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="bg-white p-5 rounded-lg border text-center">
-            <p class="font-semibold">(ISC)² Certified in Cybersecurity</p>
-            <p class="text-sm text-light-brown">Ongoing</p>
-        </div>
-        <div class="bg-white p-5 rounded-lg border text-center">
-            <p class="font-semibold">Introduction to MLOps</p>
-            <p class="text-sm text-light-brown">Microsoft Learn</p>
-        </div>
-        <div class="bg-white p-5 rounded-lg border text-center">
-            <p class="font-semibold">Python (Basic)</p>
-            <p class="text-sm text-light-brown">HackerRank</p>
-        </div>
-        <div class="bg-white p-5 rounded-lg border text-center">
-            <p class="font-semibold">C Programming</p>
-            <p class="text-sm text-light-brown">Udemy</p>
-        </div>
     </div>
 </section>
 
 <!-- Contact -->
 <section id="contact" class="page-section">
-    <div class="text-center py-10">
+    <div class="text-center py-14">
         <h2 class="font-serif text-4xl font-bold">Let’s Connect</h2>
-        <p class="mt-4 max-w-xl mx-auto text-light-brown">
-            I am actively seeking cybersecurity internship opportunities and learning-focused roles.
+        <p class="mt-4 text-light-brown">
+            Actively seeking cybersecurity internship opportunities.
         </p>
-        <div class="mt-8">
-            <a href="mailto:janania2436@gmail.com" class="bg-burgundy text-white px-10 py-4 rounded-md font-semibold">
-                Contact Me
+
+        <div class="mt-10 flex justify-center space-x-6">
+            <!-- GitHub -->
+            <a href="https://github.com/Janani2436" target="_blank"
+               class="text-light-brown hover:text-burgundy transition">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.21.68-.47v-1.67c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.5 9.5 0 0112 6.85a9.5 9.5 0 012.5.34c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0022 12c0-5.52-4.48-10-10-10z"/>
+                </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/in/janani2006" target="_blank"
+               class="text-light-brown hover:text-burgundy transition">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zM8 19h-3v-11h3v11zM6.5 6.73c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zM20 19h-3v-5.6c0-3.37-4-3.11-4 0V19h-3v-11h3v1.77c1.4-2.59 7-2.78 7 2.48V19z"/>
+                </svg>
             </a>
         </div>
     </div>
@@ -260,7 +199,7 @@
 
 <footer class="bg-beige border-t mt-12">
     <div class="container mx-auto px-6 py-6 text-center text-light-brown">
-        © 2025 Janani A. Cybersecurity Portfolio.
+        © 2025 Janani A
     </div>
 </footer>
 
@@ -269,9 +208,15 @@
     const sections = document.querySelectorAll('.page-section');
 
     function showPage(id) {
-        sections.forEach(s => s.classList.toggle('active', s.id === id));
-        navLinks.forEach(l => l.classList.toggle('active', l.hash === '#' + id));
-        window.scrollTo(0,0);
+        sections.forEach(section =>
+            section.classList.toggle('active', section.id === id)
+        );
+
+        navLinks.forEach(link =>
+            link.classList.toggle('active', link.hash === '#' + id)
+        );
+
+        window.scrollTo(0, 0);
     }
 
     navLinks.forEach(link => {
